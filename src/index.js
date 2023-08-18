@@ -7,13 +7,13 @@ import WhatsHappening from "./components/WhatsHappening";
 import Hero from "./components/Hero";
 import News from "./pages/News";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Main from "./pages/Main";
 
 const App = () => {
   return (
     <>
       <NavBar />
       <Outlet />
-      <WhatsHappening />
     </>
   );
 };
@@ -24,8 +24,9 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Hero />,
+        element: <Main />,
       },
+
       {
         path: "/news",
         element: <News />,
